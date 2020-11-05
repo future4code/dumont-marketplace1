@@ -73,8 +73,6 @@ const ButtonTransparent = styled.button`
 
 class LoginPage extends React.Component {
 
-    
-
     render() {
       return (
         <Container>
