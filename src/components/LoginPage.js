@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../img/logo.png'
+import CreateProduct from './CreateProduct/CreateProduct'
 
 
 const Container = styled.div`
@@ -71,7 +72,12 @@ const ButtonTransparent = styled.button`
   }
 `
 
+
 class LoginPage extends React.Component {
+
+  onClickSeller = (e) => {
+    this.props.renderPages();  
+  }
 
     render() {
       return (
@@ -81,8 +87,8 @@ class LoginPage extends React.Component {
             </LogoContainer>    
 
             <LoginContainer>      
-                <ButtonFull onClick={} >Quero Vender</ButtonFull>
-                <ButtonTransparent>Quero Comprar</ButtonTransparent>
+                <ButtonFull onClick={ this.onClickSeller }>Quero Vender</ButtonFull>
+                <ButtonTransparent onClick={ this.onClickCustomer }>Quero Comprar</ButtonTransparent>
             </LoginContainer>          
         </Container>
       )
