@@ -15,7 +15,14 @@ export class AppContainer extends Component {
     viewCreateProduct: false,
 
   }
-   
+
+  renderBodyProducts = () => {
+    this.setState({
+    viewBodyProducts: true,   
+    viewLoginPage: false 
+    })
+  }
+
   renderLoginPage = () => {
     this.setState({ 
       viewLoginPage: false, 
@@ -23,23 +30,13 @@ export class AppContainer extends Component {
     })
   }
 
-  renderBodyProducts = () => {
-    this.setState({
-    viewBodyProducts: true,   
-    viewLoginPage: false,    
-    viewCreateProduct: false  
-    })
-  }
-
-
   render() {
     return (
       <div>
         <Header /> 
-        { this.state.viewLoginPage && <LoginPage renderSeller={this.renderLoginPage}/> }
+        { this.state.viewLoginPage && <LoginPage renderSeller={this.renderLoginPage} renderCostumer={this.renderBodyProducts}/> }
         { this.state.viewCreateProduct && <CreateProduct /> }
-
-        { this.state.viewBodyProducts && <BodyProducts renderCostumer={this.renderBodyProducts }/> }
+        { this.state.viewBodyProducts && <BodyProducts /> }
         <Footer />
       </div>
     )
