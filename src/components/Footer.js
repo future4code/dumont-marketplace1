@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../img/logo.png'
+
 import { FaFacebookSquare } from "react-icons/fa"
 import { FaTwitterSquare } from "react-icons/fa"
 import { FaInstagramSquare } from "react-icons/fa"
+
 
 const FooterContainer = styled.div`
     position: fixed;
@@ -40,12 +42,10 @@ const LinksContainer = styled.div`
     color: #43434F;
     text-decoration: none;
     margin-right: 100px;
-    
   }
 
   a:hover {
     color: white;
-  }
 `
 
 class Footer extends React.Component {
