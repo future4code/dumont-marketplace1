@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../img/logo.png'
-import CreateProduct from './CreateProduct/CreateProduct'
-
 
 const Container = styled.div`
     background-color: #FFFCEF;
@@ -12,7 +10,6 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 `
-
 const LoginContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -75,30 +72,28 @@ const ButtonTransparent = styled.button`
 
 class LoginPage extends React.Component {
 
-  onClickSeller = (e) => {
-    this.props.renderSeller();  
+  onClickSeller = () => {
+    this.props.renderSeller();
   }
 
-  onClickCostumer = (e) => {
-    this.props.renderCostumer();  
+  onClickCostumer = () => {
+    this.props.renderCostumer();
   }
+  render() {
+    return (
+      <Container>
+        <LogoContainer>
+          <ImageLogo src={Logo} />
+        </LogoContainer>
 
-
-    render() {
-      return (
-        <Container>
-            <LogoContainer>
-                <ImageLogo src={Logo} />    
-            </LogoContainer>    
-
-            <LoginContainer>      
-                <ButtonFull onClick={ this.onClickSeller }>Quero Vender</ButtonFull>
-                <ButtonTransparent onClick={ this.onClickCostumer }>Quero Comprar</ButtonTransparent>
-            </LoginContainer>          
-        </Container>
-      )
-    }
+        <LoginContainer>
+          <ButtonFull onClick={this.onClickSeller}>Quero Vender</ButtonFull>
+          <ButtonTransparent onClick={this.onClickCostumer}>Quero Comprar</ButtonTransparent>
+        </LoginContainer>
+      </Container>
+    )
   }
+}
 
 export default LoginPage;
 
