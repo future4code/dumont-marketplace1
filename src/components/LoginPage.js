@@ -76,8 +76,13 @@ const ButtonTransparent = styled.button`
 class LoginPage extends React.Component {
 
   onClickSeller = (e) => {
-    this.props.renderPages();  
+    this.props.renderSeller();  
   }
+
+  onClickCostumer = (e) => {
+    this.props.renderCostumer();  
+  }
+
 
     render() {
       return (
@@ -88,7 +93,7 @@ class LoginPage extends React.Component {
 
             <LoginContainer>      
                 <ButtonFull onClick={ this.onClickSeller }>Quero Vender</ButtonFull>
-                <ButtonTransparent onClick={ this.onClickCustomer }>Quero Comprar</ButtonTransparent>
+                <ButtonTransparent onClick={ this.onClickCostumer }>Quero Comprar</ButtonTransparent>
             </LoginContainer>          
         </Container>
       )
@@ -97,5 +102,3 @@ class LoginPage extends React.Component {
 
 export default LoginPage;
 
-
-// teste murilo deletar

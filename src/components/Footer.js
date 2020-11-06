@@ -45,6 +45,7 @@ const LinksContainer = styled.div`
 
   a:hover {
     color: white;
+  } 
 `
 
 class Footer extends React.Component {
