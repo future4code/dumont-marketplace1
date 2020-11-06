@@ -2,12 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import Logo from '../img/logo.png'
 
+import { FaFacebookSquare } from "react-icons/fa"
+import { FaTwitterSquare } from "react-icons/fa"
+import { FaInstagramSquare } from "react-icons/fa"
+
+
 const FooterContainer = styled.div`
     position: fixed;
     bottom: 0px;
     background-color: #FCCA64;
     width: 100vw;
-    height: 300px;    
+    height: 360px;    
 `
 const InfosContainer = styled.div`
     display: flex;
@@ -22,8 +27,9 @@ const InfosContainer = styled.div`
 `
 
 const ImageLogo = styled.img`
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
 `
 
 const LinksContainer = styled.div`
@@ -35,14 +41,11 @@ const LinksContainer = styled.div`
     align-items: center;
     color: #43434F;
     text-decoration: none;
-    margin: 20px;
-    
+    margin-right: 100px;
   }
 
   a:hover {
-    color: #43434F;
-    border-bottom: 2px solid #FFFCEF;
-  }
+    color: white;
 `
 
 class Footer extends React.Component {
@@ -59,9 +62,9 @@ class Footer extends React.Component {
               </InfosContainer>
 
               <LinksContainer>
-                <a href="http://www.twitter.com" target="_blank">Twitter</a>
-                <a href="http://www.facebook.com" target="_blank">Facebook</a>    
-                <a href="http://www.instagram.com" target="_blank">Instagram</a> 
+                <a href="http://www.twitter.com" target="_blank"><FaTwitterSquare size={40} /></a>
+                <a href="http://www.facebook.com" target="_blank"><FaFacebookSquare size={40} /></a>    
+                <a href="http://www.instagram.com" target="_blank"><FaInstagramSquare size={40} /></a> 
               </LinksContainer>   
             </FooterContainer>
         )
