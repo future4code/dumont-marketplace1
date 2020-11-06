@@ -8,7 +8,6 @@ import { FaInstagramSquare } from "react-icons/fa"
 
 
 const FooterContainer = styled.div`
-    position: fixed;
     bottom: 0px;
     background-color: #FCCA64;
     width: 100vw;

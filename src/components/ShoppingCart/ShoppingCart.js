@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components"
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
 
 export const DivShoppingCart = styled.div`
     width: 70%;
@@ -41,10 +43,6 @@ export const DivTotal = styled.div`
 
 export const CartItem = styled.div `
     display: flex;
-`
-
-export const Header = styled.header `
-
 `
 
 export const CartBody = styled.div`
@@ -135,9 +133,7 @@ class ShoppingCart extends React.Component {
     render() {
         return (
             <div>
-                <Header>
-                    HEADER VAI AQUI!
-                </Header>
+                <Header />
                 <DivTitulo>
                     <h5>CARRINHO</h5>
                 </DivTitulo>
@@ -229,6 +225,7 @@ class ShoppingCart extends React.Component {
                             <CheckoutButton>Finalizar compra</CheckoutButton>
                         </DivButtons>
                 </DivShoppingCart>
+                <Footer />
             </div>
         )
     }
